@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">SecondLaba</string>
     <string name="log_in">Log In</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_login">Enter Login</string>
 </resources>
