@@ -33,7 +33,7 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="parent" />
-android:hint, recyclerview
+    recyclerview
     <EditText
         android:id="@+id/InputLogin"
         android:hint = "@string/enter_login"
