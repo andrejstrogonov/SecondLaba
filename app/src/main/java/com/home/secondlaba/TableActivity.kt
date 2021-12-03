@@ -1,13 +1,10 @@
 package com.home.secondlaba
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.home.secondlaba.databinding.ActivityMainBinding
 import com.home.secondlaba.databinding.ActivityTableActivityBinding
-import com.home.secondlaba.databinding.FilmItemBinding
+
 
 class TableActivity : AppCompatActivity() {
     lateinit var binding: ActivityTableActivityBinding
