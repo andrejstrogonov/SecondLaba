@@ -1,9 +1,10 @@
-package com.home.secondlaba
+package com.home.secondlaba.gui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.home.secondlaba.R
 import com.home.secondlaba.databinding.FilmItemBinding
 
 class FilmAdapter:RecyclerView.Adapter<FilmAdapter.FilmHolder>() {
@@ -28,7 +29,7 @@ class FilmAdapter:RecyclerView.Adapter<FilmAdapter.FilmHolder>() {
     override fun getItemCount(): Int {
        return filmList.size
     }
-    fun addFilm(film:Film){
+    fun addFilm(film: Film){
         filmList.add(film)
         notifyDataSetChanged()
     }
