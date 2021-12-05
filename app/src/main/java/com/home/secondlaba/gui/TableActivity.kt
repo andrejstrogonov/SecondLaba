@@ -46,8 +46,8 @@ class TableActivity : AppCompatActivity() {
             filmView.adapter=adapter
             buttonAdd.setOnClickListener {
 
-                /*if(index>3) index=0
-                val movie=Film(imageIdList[index],"Movie $index")
+                if(index>3) index=0
+                /*val movie=Film(imageIdList[index],"Movie $index")
                 adapter.addFilm(movie)
                 index++*/
 
