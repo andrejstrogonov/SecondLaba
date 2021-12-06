@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.home.secondlaba.R
 import com.home.secondlaba.api.UsersApiService
 import com.home.secondlaba.databinding.ActivityTableActivityBinding
+import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -32,7 +33,7 @@ class TableActivity : AppCompatActivity() {
     private fun configureRetrofit() {
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://reqres.in/api/users?page=2")
+            .baseUrl("https://reqres.in/")
             .build()
 
         val usersService = retrofit.create(UsersApiService::class.java)
@@ -41,6 +42,14 @@ class TableActivity : AppCompatActivity() {
 
 
     private fun init(){
+        binding.buttonAdd.setOnClickListener{
+            usersApiService.discoverAllUsers()
+                .observeOn(Schedulers.io())
+                .subscribe(
+                    {data->
+
+        })
+        }
         binding.apply {
             filmView.layoutManager= GridLayoutManager(this@TableActivity,3)
             filmView.adapter=adapter
