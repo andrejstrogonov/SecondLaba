@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.home.secondlaba.R
 import com.home.secondlaba.api.UsersApiService
+import com.home.secondlaba.data.UsersController
 import com.home.secondlaba.databinding.ActivityTableActivityBinding
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
@@ -46,8 +47,10 @@ class TableActivity : AppCompatActivity() {
             filmView.layoutManager= GridLayoutManager(this@TableActivity,3)
             filmView.adapter=adapter
             buttonAdd.setOnClickListener {
-                usersApiService.discoverAllUsers().observeOn(Schedulers.io()).subscribe({
+                usersApiService.quequeAllUsers().observeOn(Schedulers.io()).subscribe({
                     data->
+                    TODO()
+
                 })
                 /*if(index>3) index=0
                 val movie=Film(imageIdList[index],"Movie $index")
@@ -58,4 +61,10 @@ class TableActivity : AppCompatActivity() {
             }
         }
     }
+
+
+
+    }
 }
+
+
